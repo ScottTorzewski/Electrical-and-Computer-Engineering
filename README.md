@@ -18,4 +18,3 @@ git clone https://github.com/ScottTorzewski/Senior-Project.git
 cd Senior-Project
 pip install streamlit
 streamlit run project_dashboard_app.py
->>>>>>> d4bc6e1 (Update Project Info)
