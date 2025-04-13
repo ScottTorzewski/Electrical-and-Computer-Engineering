@@ -18,30 +18,66 @@ st.markdown(
 image_folder = os.path.dirname(__file__)
 
 # Categories of content
-section = st.selectbox("Select a section:", ["", "CAD Designs", "PCB Layouts", "Fundamental Circuits"])
+section = st.selectbox("Select a section:", ["", "Control Platform", "PCB Layouts", "Fundamental Circuits"])
 
-# CAD section
-if section == "CAD Designs":
-    st.header("🛠️ CAD Designs")
+# Control Platform section (was CAD Designs)
+if section == "Control Platform":
+    st.header("🛠️ Control Platform")
+    
     image = Image.open(os.path.join(image_folder, "CAD.png"))
     st.image(image, caption="3D Model of Kickbutton System", use_container_width=True)
     st.markdown(
-        "**Description:** A mechanical model showing the hinged kickbutton mechanism used to activate an optical sensor. Designed in Fusion 360, this model demonstrates precise alignment and spatial considerations in electromechanical integration."
+        "**Description:** A mechanical model showing the hinged kickbutton mechanism used to activate an optical sensor. "
+        "Designed in Fusion 360, this model demonstrates precise alignment and spatial considerations in electromechanical integration."
+    )
+    
+    image = Image.open(os.path.join(image_folder, "platform.jpg")).rotate(90, expand=True)
+    st.image(image, caption="Assembled Control Platform Prototype", use_container_width=True)
+    st.markdown(
+        "**Description:** Fully assembled prototype showcasing how the entire security and accessibility system is mounted and arranged. "
+        "Key design challenges included meeting a strict 0.05mm tolerance to ensure the ridge does not contact the base when the kickbutton is pressed, "
+        "ensuring mechanical durability for repeated foot use, and maintaining ergonomic and compact layout for user accessibility."
     )
 
-# PCB section
+# PCB Layouts section
 elif section == "PCB Layouts":
     st.header("🧩 PCB Layouts")
+
     image = Image.open(os.path.join(image_folder, "KiCad.png"))
     st.image(image, caption="KiCad Schematic", use_container_width=True)
     st.markdown(
-        "**Description:** Circuit schematic designed in KiCad showing the key modules for motion sensing, keypad input, audio output, and camera interface. Also includes electronics switching system for locking mechanism and backup power supply."
+        "**Description:** Circuit schematic designed in KiCad showing the key modules for motion sensing, keypad input, audio output, and camera interface. "
+        "Also includes electronics switching system for locking mechanism and backup power supply. "
+        "Challenges included integrating camera data with the Raspberry Pi Pico—ultimately resolved by using an Arduino to interface with the camera "
+        "and sending data via UART to the Pico, which handles wireless transmission. Design also addressed board overheating, grounding techniques, "
+        "audio distortion, and protection circuits using optocouplers and resistive buffering."
     )
 
     image = Image.open(os.path.join(image_folder, "PCB.png"))
-    st.image(image, caption="PCB Layout: Security & Accessibility System", use_container_width=True)
+    st.image(image, caption="Final PCB Layout", use_container_width=True)
     st.markdown(
-        "**Description:** A custom 2-layer PCB that consolidates all critical modules for the security system. Designed for real-world deployment with efficient routing and component placement."
+        "**Description:** A custom 2-layer PCB consolidating all subsystems for the security system. The layout is optimized for signal integrity, "
+        "trace efficiency, thermal distribution, and compact footprint, enabling full integration into the platform design."
+    )
+
+    image = Image.open(os.path.join(image_folder, "proto.jpg"))
+    st.image(image, caption="Prototype V0: Breadboard Version", use_container_width=True)
+    st.markdown(
+        "**Description:** The first working prototype of the system built on a breadboard. Allowed rapid iteration of control logic, power delivery, "
+        "and sensor configuration before moving to PCB fabrication."
+    )
+
+    image = Image.open(os.path.join(image_folder, "v1a.jpg")).rotate(90, expand=True)
+    st.image(image, caption="Prototype V1A: First PCB Version", use_container_width=True)
+    st.markdown(
+        "**Description:** Initial test PCB version integrating core modules. Served to validate electrical continuity, trace performance, and "
+        "real-world sensor behavior under load."
+    )
+
+    image = Image.open(os.path.join(image_folder, "v1b.jpg")).rotate(90, expand=True)
+    st.image(image, caption="Prototype V1B: PCB with Refined Routing", use_container_width=True)
+    st.markdown(
+        "**Description:** Iterated Camera module using Pico-Arduino UART connection. Sends image data over wifi to remote device for viewing. Final pre-deployment version before full platform assembly."
     )
 
 # Fundamental Circuits section
@@ -51,7 +87,6 @@ elif section == "Fundamental Circuits":
         "These circuits were built and simulated in LTspice to reinforce low-level intuition. Understanding how signal amplification, filtering, and feedback behave in analog systems is key to designing robust embedded platforms."
     )
 
-    # Individual circuit selection
     fundamental_circuits = {
         "Barkhausen Oscillator": {
             "file": "Barkhausen.png",
