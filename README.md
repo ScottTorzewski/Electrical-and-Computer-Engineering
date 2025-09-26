@@ -11,7 +11,7 @@ With the growing need for independent living among people with disabilities and 
 <br>
 
 <p align="center">
- <img src="./Project1/Images/main project.png" alt="main project" width="600"/>
+ <img src="./Project1/Images/main project.png" alt="main project" width="500"/>
 </p>
 
 <br>
