@@ -8,6 +8,14 @@ After committing to Lafayette, I chose electrical and computer engineering as my
 ## 1️⃣ SALE (Smart Assisted Living Environment): Integrated IoT Solutions for Individuals with Limited Limb Mobility
 With the growing need for independent living among people with disabilities and the elderly, smart homes offer a transformative solution through automation and remote control of daily household tasks. However, most existing systems lack inclusive designs that address the specific needs of users with impaired motor function. To bridge this gap, we developed a minimalist yet scalable smart home frame-work incorporating a custom adaptive remote control device that uses directional input to interact with various smart appliances. The system enables users to perform essential and semi-essential tasks such as lighting, entertainment, and door control, with minimal physical effort. My contributions include the remote control device interaction system and the smart security system.
 
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/image8.png" alt="image8" width="800" height="800"/>
+</p>
+
+<br>
+
 ### 🅰️ Remote Control Device Interaction System
 
 ### 🅱️ Smart Security System
