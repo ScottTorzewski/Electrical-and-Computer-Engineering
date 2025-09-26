@@ -29,7 +29,7 @@ The core component is a transmissive photomicrosensor. Each button is equipped w
 
 <br>
 
-### 💡 Optoelectronics
+### 💡 Optoelectronics Engineering
 
 The EE-SX3173/4173-P series photomicrosensor achieves high precision and reliability by integrating an infrared LED emitter and a photo-integrated circuit (photo IC) in a single housing. The key to its advanced performance is the photo IC, which incorporates sophisticated signal processing directly on the detector chip rather than just relying on a simple phototransistor. The sensor uses a near-infrared LED, typically with a peak wavelength around 940 nm. Infrared light is less affected by ambient visible light, a common source of interference. A focusing lens is molded into the emitter side of the housing. This concentrates the emitted light into a narrow, parallel beam to ensure the light reaching the detector is not diffuse. A tight, focused beam is crucial for the precise detection of small objects or fine positioning as it provides a high-contrast change when interrupted.
 
