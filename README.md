@@ -50,6 +50,30 @@ The goal of this device is to develop a smart security system capable of detecti
 
 <br>
 
+The ArduCAM Mini 5MP Plus (OV5642) is interfaced with the Arduino via SPI, using dedicated chip select, MISO, MOSI, and SCK lines. Upon motion detection using the HC- SR501 PIR sensor, the Arduino initiates continuous image capture in JPEG format at a resolution of 320 × 240. There is no fixed frame count limit; the Arduino continues to stream frames at a rate of approximately 10 frames per second for the duration of the motion event. Each frame is buffered internally by the ArduCAM and then read byte-by-byte over SPI. The Arduino transmits the JPEG data to the Pico via UART, enclosing each image between custom markers: IMG_START, frame_number, and END. These markers allow the Pico to detect and parse each complete image reliably, even if some markers are split across multiple Reads.
+
+To ensure electrical compatibility between the two boards, a 2kΩ–1kΩ voltage divider is implemented on the Arduino TX line to safely shift its 5V UART signal to the Pico’s 3.3V logic level. The UART connection operates at a baud rate of 57600, which was experimentally determined to be the highest stable rate for full JPEG frame transfers without packet loss or corruption.
+
+On the receiving end, the Pico W continuously reads from its UART buffer, monitoring for the IMG_START marker. Once this is detected, the Pico collects image data into a byte array until it sees the END marker. Afterward, it verifies the data by locating the standard JPEG start (0xFFD8) and end (0xFFD9) markers, and strips any garbage bytes before or after the actual image. The cleaned JPEG is then base64-encoded and published to the MQTT topic camera/frames/latest, where it can be rendered by Home Assistant or any other subscriber.
+
+In parallel, the Arduino also transmits motion state messages (MOTION:1 or MOTION:0) when the PIR sensor is triggered or reset. These messages are processed by the Pico and published to the MQTT topic camera/motion, which allows the Home Assistant hub to distinguish between idle and active states, log motion events, and trigger user notifications. Because image capture is tied directly to the PIR signal and operates in real-time during motion, the system provides a continuously updated visual feed to the user while minimizing unnecessary image transmission during periods of inactivity. This implementation plan has been validated in testing and is robust under real-world usage.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/arducam.png" alt="arducam" width="600"/>
+</p>
+
+<br>
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/pi arduino.png" alt="pi arduino" width="600"/>
+</p>
+
+<br>
+
 ## 2️⃣ Guitar Savior: Embedded Systems Project for Musical Video Game Entertainment System
 
 ## 3️⃣ Health Monitor: FPGA Medical Device
