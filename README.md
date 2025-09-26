@@ -50,7 +50,7 @@ The goal of this device is to develop a smart security system capable of detecti
 
 <br>
 
-The ArduCAM Mini 5MP Plus (OV5642) is interfaced with the Arduino via SPI, using dedicated chip select, MISO, MOSI, and SCK lines. Upon motion detection using the HC- SR501 PIR sensor, the Arduino initiates continuous image capture in JPEG format at a resolution of 320 × 240. There is no fixed frame count limit; the Arduino continues to stream frames at a rate of approximately 10 frames per second for the duration of the motion event. Each frame is buffered internally by the ArduCAM and then read byte-by-byte over SPI. The Arduino transmits the JPEG data to the Pico via UART, enclosing each image between custom markers: IMG_START, frame_number, and END. These markers allow the Pico to detect and parse each complete image reliably, even if some markers are split across multiple Reads.
+The ArduCAM Mini 5MP Plus (OV5642) is interfaced with the Arduino via SPI, using dedicated chip select, MISO, MOSI, and SCK lines. Upon motion detection using the HC-SR501 PIR sensor, the Arduino initiates continuous image capture in JPEG format at a resolution of 320 × 240. There is no fixed frame count limit; the Arduino continues to stream frames at a rate of approximately 10 frames per second for the duration of the motion event. Each frame is buffered internally by the ArduCAM and then read byte-by-byte over SPI. The Arduino transmits the JPEG data to the Pico via UART, enclosing each image between custom markers: IMG_START, frame_number, and END. These markers allow the Pico to detect and parse each complete image reliably, even if some markers are split across multiple Reads.
 
 To ensure electrical compatibility between the two boards, a 2kΩ–1kΩ voltage divider is implemented on the Arduino TX line to safely shift its 5V UART signal to the Pico’s 3.3V logic level. The UART connection operates at a baud rate of 57600, which was experimentally determined to be the highest stable rate for full JPEG frame transfers without packet loss or corruption.
 
@@ -63,6 +63,16 @@ In parallel, the Arduino also transmits motion state messages (MOTION:1 or MOTIO
 <p align="center">
   <img src="./Project1/Images/arducam.png" alt="arducam" width="400"/>
   <img src="./Project1/Images/arduino pi.png" alt="arduino pi" width="400"/>
+</p>
+
+<br>
+
+System performance was evaluated in terms of image capture latency, transmission delay, and data consistency. With the ArduCAM configured to capture images at a reduced resolution of 320 x 240 pixels, average JPEG file sizes ranged between 8-15 KB depending on scene complexity. Simpler, low-texture scenes yielded smaller files and faster transmission times, while high-contrast or detailed scenes increased JPEG size and introduced transmission lag. The total end-to-end latency from image capture to image availability in Home Assistant was measured to be approximately 0.9 second under worst case conditions. The ArduCAM completes image capture in a consistent 100ms, while the remaining 800ms is split between UART transmission and Wi-Fi/MQTT publishing. Since image transfer over UART ac- counts for the bulk of this delay, the residual 200-400 ms was conservatively attributed to JPEG parsing, base64 encoding, MQTT transmission, broker processing, and Home Assistant rendering. While precise timing of each software layer was not instrumented, these estimates align with expected performance from similar MQTT-Wi-Fi pipelines. Transmission speed was strongly influenced by image complexity, as more detailed images required more bytes over UART and Wi-Fi. This resulted in latency variability of ±0.5 seconds. Below is an image showing how the video stream is displayed in home assistant.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/home assistant.png" alt="home assistant" width="600"/>
 </p>
 
 <br>
