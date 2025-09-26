@@ -17,6 +17,17 @@ With the growing need for independent living among people with disabilities and 
 <br>
 
 ### 🅰️ Remote Control Device Interaction System
+The SALE-R (SALE Remote) buttons are designed to offer directional control to the resident, allowing them to navigate the smart home interface using up, down, left, right, and select commands. These buttons serve both assistive and rehabilitative purposes. While they enable the user to control the entire smart home system through the Smart Mobile Device, they also promote the use of residual limb mobility. Each time a button is physically pressed, the corresponding UI button in the bottom window of the Smart Mobile Device app lights up green.
+
+The core component is a transmissive photomicrosensor. Each button is equipped with one of these optical sensors, and the button mount includes a spring mechanism. When the button is pressed, an internal flag interrupts the laser beam inside the optical switch. This interruption signals the sensor that the button has been activated, thereby registering a button press.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/saler.png" alt="main project" width="600"/>
+</p>
+
+<br>
 
 ### 🅱️ Smart Security System
 
