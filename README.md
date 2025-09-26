@@ -61,7 +61,7 @@ In parallel, the Arduino also transmits motion state messages (MOTION:1 or MOTIO
 <br>
 
 <p align="center">
- <img src="./Project1/Images/arducam.png" alt="arducam" width="600"/>
+ <img src="./Project1/Images/arducam.png" alt="arducam" width="400"/>
 </p>
 
 <br>
@@ -69,7 +69,7 @@ In parallel, the Arduino also transmits motion state messages (MOTION:1 or MOTIO
 <br>
 
 <p align="center">
- <img src="./Project1/Images/pi arduino.png" alt="pi arduino" width="600"/>
+ <img src="./Project1/Images/arduino pi.png" alt="arduino pi" width="400"/>
 </p>
 
 <br>
