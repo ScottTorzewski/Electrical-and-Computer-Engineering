@@ -72,7 +72,7 @@ System performance was evaluated in terms of image capture latency, transmission
 <br>
 
 <p align="center">
- <img src="./Project1/Images/home assistant.png" alt="home assistant" width="600"/>
+ <img src="./Project1/Images/home assistant.png" alt="home assistant" width="450"/>
 </p>
 
 <br>
