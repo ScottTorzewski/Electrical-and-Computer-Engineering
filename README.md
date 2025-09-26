@@ -24,7 +24,7 @@ The core component is a transmissive photomicrosensor. Each button is equipped w
 <br>
 
 <p align="center">
- <img src="./Project1/Images/saler.png" alt="main project" width="600"/>
+ <img src="./Project1/Images/saler.png" alt="saler" width="600"/>
 </p>
 
 <br>
@@ -40,6 +40,15 @@ The detector is a high-performance integrated circuit containing several compone
 </p>
 
 ### 🅱️ Smart Security System
+The goal of this device is to develop a smart security system capable of detecting motion at an entry point, capturing and processing image data, and securely communicating visual alerts via wireless protocols. The system is designed to function as a reliable and low-power video monitoring device for the smart home system. Emphasis is placed on reliable wireless communication and latency optimization for real-time streaming. The system is built around the following hardware and software elements. The ArduCAM Mini 5MP Plus (OV5642) is used to capture 320 x 240 JPEG images at 10 frames per second and compress them on board to reduce transmission burden. The Arduino UNO controls the ArduCAM and transmits JPEG image data line-by-line over UART. The Raspberry Pi Pico W reconstructs the JPEG and conditionally transmits the image via MQTT. The HC-SR501 PIR Motion Sensor is integrated with the Arduino to detect motion events. It triggers a notification on the Smart Mobile Device to prompt the user to open the live feed.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/system level diagram.png" alt="system level diagram" width="600"/>
+</p>
+
+<br>
 
 ## 2️⃣ Guitar Savior: Embedded Systems Project for Musical Video Game Entertainment System
 
