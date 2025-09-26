@@ -38,14 +38,6 @@ The detector is a high-performance integrated circuit containing several compone
 <br>
 
 <p align="center">
- <img src="./Project1/Images/optical sensor.png" alt="optical sensor" width="500"/>
-</p>
-
-<br>
-
-<br>
-
-<p align="center">
  <img src="./Project1/Images/optical sensor 2.png" alt="optical sensor 2" width="500"/>
 </p>
 
