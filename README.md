@@ -101,8 +101,8 @@ For our ECE 414 Embedded Systems final project, we designed Guitar Savior, a com
 <br>
 
 <p align="center">
-  <img src="./Project1/Images/initial design.png" alt="initial design" width="500"/>
-  <img src="./Project1/Images/guitar savior kicad.png" alt="guitar savior kicad" width="500"/>
+  <img src="./Project2/Images/initial design.png" alt="initial design" width="500"/>
+  <img src="./Project2/Images/guitar savior kicad.png" alt="guitar savior kicad" width="500"/>
 </p>
 
 <br>
@@ -112,8 +112,8 @@ The gameplay is designed to synchronize user input with pre-programmed notes dis
 <br>
 
 <p align="center">
-  <img src="./Project1/Images/final design.png" alt="final design" width="500"/>
-  <img src="./Project1/Images/final design 2.png" alt="final design 2" width="500"/>
+  <img src="./Project2/Images/final design.png" alt="final design" width="500"/>
+  <img src="./Project2/Images/final design 2.png" alt="final design 2" width="500"/>
 </p>
 
 <br>
