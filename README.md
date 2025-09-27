@@ -1,7 +1,7 @@
 # ⚡ Electrical and Computer Engineering
 
 ## *️⃣ Motivation
-After committing to Lafayette, I chose electrical and computer engineering as my major.
+Electrical and computer engineering appeals to me because it unites mathematics, physics, and hands-on design. I enjoy applying mathematical analysis to real engineering problems, whether in circuit design, embedded systems, or signal processing. My coursework and projects showed me how ideas move from theory into working systems, and I found that transition both challenging and rewarding. I am especially interested in hardware design, where abstract theory meets physical implementation. I enjoy creating schematics, laying out PCBs, and digging into the physics of components like semiconductors and optical devices. For me, the challenge is in bridging mathematical models with practical design choices to ensure that what works on paper translates into reliable, working systems. Ultimately, I am motivated by the chance to apply these skills productively by developing technologies that not only work, but also serve real needs and contribute meaningfully to society.
 
 ---
 
