@@ -101,8 +101,7 @@ For our ECE 414 Embedded Systems final project, we designed Guitar Savior, a com
 <br>
 
 <p align="center">
-  <img src="./Project2/Images/initial design.png" alt="initial design" width="500"/>
-  <img src="./Project2/Images/guitar savior kicad.png" alt="guitar savior kicad" width="500"/>
+ <img src="./Project2/Images/guitar savior kicad.png" alt="guitar savior kicad" width="600"/>
 </p>
 
 <br>
