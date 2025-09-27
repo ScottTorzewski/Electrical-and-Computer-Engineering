@@ -82,8 +82,8 @@ Another concept I designed was a smart locking system that could integrate with 
 <br>
 
 <p align="center">
-  <img src="./Project1/Images/KiCad.png" alt="KiCad" width="600"/>
-  <img src="./Project1/Images/PCB.png" alt="PCB" width="300"/>
+  <img src="./Project1/Images/KiCad.png" alt="KiCad" width="500"/>
+  <img src="./Project1/Images/PCB.png" alt="PCB" width="400"/>
 </p>
 
 <br>
