@@ -124,7 +124,7 @@ For digital circuits, I designed and implemented a digital health monitor system
 <br>
 
 <p align="center">
- <img src="./Project1/Images/pulse monitor.png" alt="pulse monitor" width="600"/>
+ <img src="./Project3/Images/pulse monitor.png" alt="pulse monitor" width="600"/>
 </p>
 
 <br>
@@ -134,7 +134,7 @@ The reaction timer module incorporated a clock divider to generate a 1 kHz signa
 <br>
 
 <p align="center">
- <img src="./Project1/Images/reaction timer.png" alt="reaction timer" width="600"/>
+ <img src="./Project3/Images/reaction timer.png" alt="reaction timer" width="600"/>
 </p>
 
 <br>
@@ -144,7 +144,7 @@ Integration into the top-level module included the addition of clock division, p
 <br>
 
 <p align="center">
- <img src="./Project1/Images/top level.png" alt="top level" width="600"/>
+ <img src="./Project3/Images/top level.png" alt="top level" width="600"/>
 </p>
 
 <br>
