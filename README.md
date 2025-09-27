@@ -96,4 +96,26 @@ Beyond its excellent electrical characteristics, the IRLZ444N was chosen for its
 
 ## 2️⃣ Guitar Savior: Embedded Systems Project for Musical Video Game Entertainment System
 
+For our ECE 414 Embedded Systems final project, we designed Guitar Savior, a compact musical video game system inspired by Guitar Hero. The goal of the project was to explore real-time embedded control, user interaction, and synchronized audio-visual output in a streamlined and accessible format. The system integrates a Raspberry Pi Pico as the central microcontroller, an Adafruit 2.4’’ TFT display for visual output, an Adafruit Audio FX Sound Board for music playback, and four input buttons mounted on a 3D-printed guitar head. The guitar neck and other supporting components were fabricated using common materials, such as wood and wiring, to create a functional, self-contained game controller.
+
+<br>
+
+<p align="center">
+  <img src="./Project1/Images/initial design.png" alt="initial design" width="500"/>
+  <img src="./Project1/Images/guitar savior kicad.png" alt="guitar savior kicad" width="500"/>
+</p>
+
+<br>
+
+The gameplay is designed to synchronize user input with pre-programmed notes displayed on the screen, while audio is output from the Sound Board. The Pico continuously monitors button presses, maps them to note colors, and tracks timing with 250 ms tolerance to ensure responsive play. The display updates in real-time to reflect incoming notes and player actions, showing both current progress and scoring feedback. Audio output is independent of the player inputs, but synchronized with the display for a cohesive experience. The system also includes conditional game states, such as “defeat” when fewer than 65% of notes are hit correctly and “congratulations” for successfully completing the song, with an option to restart the game at any time. From a hardware perspective, the project emphasizes robust connections and proper interfacing. The button matrix is routed to the Pico’s GPIO pins, while the TFT and Audio FX Sound Board are integrated using recommended protocols and voltage levels. Challenges such as miswired buttons during initial testing highlighted the importance of careful planning and schematic verification. The final design demonstrates proficiency in embedded systems integration, real-time digital control, audio-visual synchronization, and troubleshooting complex hardware-software interactions.
+
+<br>
+
+<p align="center">
+  <img src="./Project1/Images/final design.png" alt="final design" width="500"/>
+  <img src="./Project1/Images/final design 2.png" alt="final design 2" width="500"/>
+</p>
+
+<br>
+
 ## 3️⃣ Health Monitor: FPGA Medical Device
