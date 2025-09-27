@@ -118,3 +118,33 @@ The gameplay is designed to synchronize user input with pre-programmed notes dis
 <br>
 
 ## 3️⃣ Health Monitor: FPGA Medical Device
+
+For digital circuits, I designed and implemented a digital health monitor system in SystemVerilog by integrating two primary functional modules: a pulse monitor and a reaction timer, instantiated within a top-level module. The pulse monitor included several submodules: a pulse counter to record input pulses over five-second intervals, a delay counter to reset counting cycles, multiple shift registers to store sequential pulse data, multi-bit adders to sum and average pulse counts, a beats-per-minute converter, and a binary-to-BCD module to output values to a seven-segment display.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/pulse monitor.png" alt="pulse monitor" width="600"/>
+</p>
+
+<br>
+
+The reaction timer module incorporated a clock divider to generate a 1 kHz signal, a finite state machine (FSM) to manage sequential states, a random wait module to introduce variable delay intervals, 5- and 10-second timed counters, a time count module for precise interval measurement, and an RGB PWM controller to adjust signal output widths. Each module was designed hierarchically, employing explicit port declarations, sequential logic, nonblocking assignments, and if/else conditional structures to ensure correct functional behavior and timing.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/reaction timer.png" alt="reaction timer" width="600"/>
+</p>
+
+<br>
+
+Integration into the top-level module included the addition of clock division, pulse input debouncing, and a pulse pusher to guarantee stable sequential logic and reliable synchronization across modules. Verification involved extensive debugging, including cross-referencing block diagrams with elaborated Vivado schematics, ensuring all connections were accurate, and confirming correct signal propagation, state transitions, and timing behavior. Final validation was completed by generating a bitstream and performing functional testing to confirm accurate pulse monitoring and reaction timing.Through this project, I gained in-depth experience in modular system design, hierarchical integration of digital submodules, sequential and combinational logic implementation, hardware description language development, and rigorous verification methods.
+
+<br>
+
+<p align="center">
+ <img src="./Project1/Images/top level.png" alt="top level" width="600"/>
+</p>
+
+<br>
