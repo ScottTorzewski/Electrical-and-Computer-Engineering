@@ -98,7 +98,7 @@ Beyond its excellent electrical characteristics, the IRLZ444N was chosen for its
 
 ## 2️⃣ Guitar Savior: Embedded Systems Project for Musical Video Game Entertainment System
 
-For our ECE 414 Embedded Systems final project, we designed Guitar Savior, a compact musical video game system inspired by Guitar Hero. The goal of the project was to explore real-time embedded control, user interaction, and synchronized audio-visual output in a streamlined and accessible format. The system integrates a Raspberry Pi Pico as the central microcontroller, an Adafruit 2.4’’ TFT display for visual output, an Adafruit Audio FX Sound Board for music playback, and four input buttons mounted on a 3D-printed guitar head. The guitar neck and other supporting components were fabricated using common materials, such as wood and wiring, to create a functional, self-contained game controller.
+Guitar Savior is a compact musical video game system inspired by Guitar Hero. The goal of the project was to explore real-time embedded control, user interaction, and synchronized audio-visual output in a streamlined and accessible format. The system integrates a Raspberry Pi Pico as the central microcontroller, an Adafruit 2.4’’ TFT display for visual output, an Adafruit Audio FX Sound Board for music playback, and four input buttons mounted on a 3D-printed guitar head. The guitar neck and other supporting components were fabricated using common materials, such as wood and wiring, to create a functional, self-contained game controller.
 
 <br>
 
