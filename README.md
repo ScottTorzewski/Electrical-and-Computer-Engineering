@@ -16,7 +16,7 @@ With the growing need for independent living among people with disabilities and 
 
 <br>
 
-### 🅰️ Remote Control Device Interaction System
+### Remote Control Device Interaction System
 The SALE-R (SALE Remote) buttons are designed to offer directional control to the resident, allowing them to navigate the smart home interface using up, down, left, right, and select commands. These buttons serve both assistive and rehabilitative purposes. While they enable the user to control the entire smart home system through the Smart Mobile Device, they also promote the use of residual limb mobility. Each time a button is physically pressed, the corresponding UI button in the bottom window of the Smart Mobile Device app lights up green. The primary circuitry of the system consists of a printed circuit board that detects button press signals, processes them, and sends them to the Smart Mobile Device using Bluetooth Low Energy (through the Pico W). The kick buttons were custom-designed and 3-D printed using Fusion360.
 
 The core component is a transmissive photomicrosensor. Each button is equipped with one of these optical sensors, and the button mount includes a spring mechanism. When the button is pressed, an internal flag interrupts the laser beam inside the optical switch. This interruption signals the sensor that the button has been activated, thereby registering a button press.
@@ -41,7 +41,7 @@ These optical sensors have numerous applications in biomedical and healthcare fi
  <img src="./Project1/Images/optical sensor 2.png" alt="optical sensor 2" width="400"/>
 </p>
 
-### 🅱️ Smart Security System
+### Smart Security System
 The goal of this device is to develop a smart security system capable of detecting motion at an entry point, capturing and processing image data, and securely communicating visual alerts via wireless protocols. The system is designed to function as a reliable and low-power video monitoring device for the smart home system. Emphasis is placed on reliable wireless communication and latency optimization for real-time streaming. The system is built around the following hardware and software elements. The ArduCAM Mini 5MP Plus (OV5642) is used to capture 320 x 240 JPEG images at 10 frames per second and compress them on board to reduce transmission burden. The Arduino UNO controls the ArduCAM and transmits JPEG image data line-by-line over UART. The Raspberry Pi Pico W reconstructs the JPEG and conditionally transmits the image via MQTT. The HC-SR501 PIR Motion Sensor is integrated with the Arduino to detect motion events. It triggers a notification on the Smart Mobile Device to prompt the user to open the live feed.
 
 <br>
